@@ -7,7 +7,7 @@
   List of properties from
   https://github.com/googlemaps/v3-utility-library/blob/master/markerclustererplus/src/markerclusterer.js
 **/
-import MarkerClusterer from 'marker-clusterer-plus'
+import MarkerClusterer from '@googlemaps/markerclustererplus'
 import mapElementFactory from '../factories/map-element'
 
 const props = {
@@ -125,6 +125,7 @@ export default mapElementFactory({
     this.$children.forEach(marker => {
       if (marker.$clusterObject === this.$clusterObject) {
         marker.$clusterObject = null
+        marker.setMap(null)
       }
     })
 

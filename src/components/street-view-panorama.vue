@@ -6,7 +6,9 @@
 </template>
 
 <script>
-export default ((x) => x.default || x)(require('../components-implementation/street-view-panorama'))
+import Implementation from '../components-implementation/street-view-panorama'
+export default Implementation
+// export default ((x) => x.default || x)(require('../components-implementation/street-view-panorama'))
 </script>
 
 <style lang="css">
